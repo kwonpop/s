@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비행기 표 다운로드</title>
+</head>
+<body>
+    <h1>비행기 표 다운로드</h1>
+    <form action="{% url 'download_image' %}" method="post">
+        {% csrf_token %}
+        <label for="image_url">이미지 URL:</label>
+        <input type="text" id="image_url" name="image_url" required>
+        <button type="submit">비행기 표 이미지 다운로드</button>
+    </form>
+</body>
+</html>
